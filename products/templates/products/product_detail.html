@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+{#  <ul>#}
+{#    {% for item in object %}#}
+{#      <li>Product Name: {{ item.title }}</li>#}
+{#      <li>Product Description: {{ item.description }}</li>#}
+{#      <li>Product Price: {{ item.price }}</li>#}
+{#      <li>Product Summary: {{ item.summary }}</li>#}
+{#      <li>Product email: {{ item.email }}</li>#}
+{#      <br><br>#}
+{#    {% endfor %}#}
+{#  </ul>#}
+
+  {% for instance in object %}
+    <p>{{ instance.id }} - <a href="{{ instance.get_absolute_url }}">{{ instance.title }}</a></p>
+  {% endfor %}
+
+{% endblock %}
+
