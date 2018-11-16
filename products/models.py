@@ -12,7 +12,8 @@ class Product(models.Model):
     summary = models.TextField(default=False)
 
     def get_absolute_url(self):
-        return reverse('products:dynamic_view', kwargs={'my_id': self.id})
+        # return reverse('products:dynamic_view', kwargs={'my_id': self.id})
+        return reverse('products:dynamic_view', args=[self.pk])
 
     def __str__(self):
         return self.title
