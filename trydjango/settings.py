@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     # 'products.apps.ProductsConfig',
     # 'pages',
     # 'vote'
-    'myapp'
+    'myapp',
+    'courses'
 ]
 
 MIDDLEWARE = [
